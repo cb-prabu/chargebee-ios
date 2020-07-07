@@ -23,24 +23,32 @@ extension APIResource {
         return urlRequest
     }
 
-    func create(body: [(String, String)], isUrlEncoded: Bool = true) -> URLRequest {
+    func create<T: Encodable>(body: T, isUrlEncoded: Bool = true) -> URLRequest {
         let url = URL(string: baseUrl)!
         var urlRequest = URLRequest(url: url)
-        urlRequest.addValue(authHeader, forHTTPHeaderField: "Authorization")
-        urlRequest.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
-        print("checcking inside create \(self.url)")
-        urlRequest.httpMethod = "post"
-        if isUrlEncoded {
-            urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        headers.forEach { key, value in
+            urlRequest.addValue(value, forHTTPHeaderField: key)
         }
         urlRequest.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
-        urlRequest.addValue("Basic " + authHeader, forHTTPHeaderField: "Authorization")
-
+        urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        print("checcking inside create \(self.url)")
+        urlRequest.httpMethod = "post"
+//        if isUrlEncoded {
+//        }
+//        urlRequest.addValue("XMLHttpRequest", forHTTPHeaderField: "X-Requested-With")
+//        urlRequest.addValue("Basic " + authHeader, forHTTPHeaderField: "Authorization")
+//
         var bodyComponents = URLComponents()
-        bodyComponents.queryItems = body.map({ (key, value) -> URLQueryItem in
-            URLQueryItem(name: key, value: value)
-        })
+//        bodyComponents.queryItems = body.map({ (key, value) -> URLQueryItem in
+//            URLQueryItem(name: key, value: value)
+//        })
+        urlRequest.httpBody = try? JSONEncoder().encode(body)
         urlRequest.httpBody = bodyComponents.query?.data(using: .utf8)
+        print(body)
+        print("-----------------------------------------------------------------")
+        print(try? JSONEncoder().encode(body))
+        print("-----------------------------------------------------------------")
+        print(dump(urlRequest.httpBody))
         return urlRequest
     }
 }
@@ -65,9 +73,10 @@ extension APIRequest: NetworkRequest {
         load(resource.url, withCompletion: completion)
     }
 
-    func create(body: [String: String], withCompletion completion: @escaping (Resource.ModelType?) -> Void) {
+    func create<T: Codable>(body: T, withCompletion completion: @escaping (Resource.ModelType?) -> Void) {
         print("got this url \(resource.url)")
-        create(resource.url, headers: resource.headers, body: body , withCompletion: completion)
+//        load(resource.create(body: body), withCompletion: completion)
+        load(resource.create(body: body), withCompletion: completion)
     }
 }
 
@@ -83,6 +92,18 @@ struct TempTokenBody: Codable {
     }
 }
 
+struct CBTempToken: Codable {
+    let paymentMethodType: String
+    let idAtVault: String
+    let gatewayAccountId: String
+
+    enum CodingKeys: String, CodingKey {
+        case paymentMethodType = "payment_method_type"
+        case idAtVault = "id_at_vault"
+        case gatewayAccountId = "gateway_account_id"
+    }
+}
+
 @available(macCatalyst 13.0, *)
 class CBTokenResource: APIResource {
     var headers: [String: String]
@@ -92,16 +113,18 @@ class CBTokenResource: APIResource {
     let methodPath: String = ""
 
     init() {
-        self.authHeader = "test_uMJh75cuR3HwwuEAzDcs2ewJEhLjhIbWf".data(using: .utf8)?.base64EncodedString() ?? ""
-        self.headers = ["Authorization": "Basic \(self.authHeader)"]
+        let changeMe = "test_uMJh75cuR3HwwuEAzDcs2ewJEhLjhIbWf".data(using: .utf8)?.base64EncodedString() ?? ""
+        self.authHeader = "Basic " + changeMe
+        self.headers = ["Authorization": "\(self.authHeader)"]
     }
 
-    func createTempToken(paymentMethodType: String, token: String, gatewayId: String) {
-        let body = [
-            ("payment_method_type", paymentMethodType),
-            ("id_at_vault", token),
-            ("gateway_account_id", gatewayId),
-        ]
-        self.create(body: body)
-    }
+//    func createTempToken(paymentMethodType: String, token: String, gatewayId: String) {
+//        let body = [
+//            ("payment_method_type", paymentMethodType),
+//            ("id_at_vault", token),
+//            ("gateway_account_id", gatewayId),
+//        ]
+//        let tempToken: CBTempToken = CBTempToken(paymentMethodType: paymentMethodType, idAtVault: token, gatewayAccountId: gatewayId)
+//        self.create(body: tempToken)
+//    }
 }

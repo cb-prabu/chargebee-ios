@@ -64,3 +64,14 @@ struct PaymentProviderConfig: Decodable {
         case clientId = "client_id"
     }
 }
+
+struct CBError: Codable {
+//    let message?: String
+    let type: String
+//    let api_error_code: String
+//    let param: String
+//    let error_code: String
+//    let error_msg: String
+//    let error_param: String
+//    let http_status_code: Int
+}

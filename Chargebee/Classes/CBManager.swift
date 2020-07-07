@@ -84,30 +84,29 @@ struct StripeResponse: Decodable {
 class StripeTokenizer {
     let paymentConfigUrl = "https://api.stripe.com/v1/tokens"
     func tokenize(paymentKey: String, completion handler: @escaping ((StripeResponse?) -> Void)) {
+        let resource = StripeTokenResource(paymentKey)
+        let request = APIRequest(resource: resource)
 
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
-
-        var bodyComponents = URLComponents()
-        bodyComponents.queryItems = [URLQueryItem(name: "card[number]", value: "4242424242424242"),
-                                     URLQueryItem(name: "key", value: paymentKey),
-                                     URLQueryItem(name: "card[cvc]", value: "123"),
-                                     URLQueryItem(name: "card[exp_month]", value: "12"),
-                                     URLQueryItem(name: "card[exp_year]", value: "2029")]
-
-        var urlRequest = URLRequest(url: URL(string: paymentConfigUrl)!)
-        urlRequest.httpMethod = "POST"
-        urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        urlRequest.httpBody = bodyComponents.query?.data(using: .utf8)
-        let task = session.dataTask(with: urlRequest, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-            // Parse the data in the response and use it
-            guard let data = data else {
-                handler(nil)
-                return
+//        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: .main)
+//
+//        var bodyComponents = URLComponents()
+//        bodyComponents.queryItems = [URLQueryItem(name: "card[number]", value: "4242424242424242"),
+//                                     URLQueryItem(name: "key", value: paymentKey),
+//                                     URLQueryItem(name: "card[cvc]", value: "123"),
+//                                     URLQueryItem(name: "card[exp_month]", value: "12"),
+//                                     URLQueryItem(name: "card[exp_year]", value: "2029")]
+//
+//        var urlRequest = URLRequest(url: URL(string: paymentConfigUrl)!)
+//        urlRequest.httpMethod = "POST"
+//        urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+//        urlRequest.httpBody = bodyComponents.query?.data(using: .utf8)
+        let card: StripeCard = StripeCard(number: "4242424242424242", expiryMonth: "12", expiryYear: "2029", cvc: "123")
+        request.create(body: StripeCard) { res in
+            print("Varuthu \(res)")
+            if res != nil {
+                handler(res?.token.id)
             }
-            let wrapper = try? JSONDecoder().decode(StripeResponse.self, from: data)
-            handler(wrapper)
-        })
-        task.resume()
+        }
     }
 
 }
@@ -126,11 +125,7 @@ class CBTemporaryToken {
         let resource = CBTokenResource()
 //        resource.createTempToken(paymentMethodType: "card", token: vaultId, gatewayId: "gw_16CPK9S2d87Uj9M")
         let request = APIRequest(resource: resource)
-        let body = [
-            "payment_method_type": "card",
-            "id_at_vault": vaultId,
-            "gateway_account_id": "gw_16CPK9S2d87Uj9M",
-        ]
+        let body: CBTempToken = CBTempToken(paymentMethodType: "card", idAtVault: vaultId, gatewayAccountId: "gw_16CPK9S2d87Uj9M")
         request.create(body: body) { (res: TokenWrapper?) in
             print("Varuthu \(res)")
             if res != nil {

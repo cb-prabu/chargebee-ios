@@ -26,14 +26,14 @@ class ViewController: UIViewController {
 
     @IBAction func tokenize() {
         print("Tokenizing result")
-//        CBManager().getTemporaryToken() { s in
-//            print("Final CB Token \(s)")
-//            self.resultLabel.text = s!
-//        }
-
-        CBManager().getPlan("cb-demo-no-trial") { res in
-            print("Plan Details", res)
+        CBManager().getTemporaryToken() { s in
+            print("Final CB Token \(s)")
+            self.resultLabel.text = s!
         }
+
+//        CBManager().getPlan("cb-demo-no-trial") { res in
+//            print("Plan Details", res)
+//        }
 
 //        CBManager().getAddon("cbdemo_setuphelp") { res in
 //            print("Addon Details", res)

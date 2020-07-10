@@ -25,7 +25,7 @@ import Chargebee
 
 ...
 
-CBManager.configure(site: "site-code", apiKey: "api_key")
+Chargebee.configure(site: "site-code", apiKey: "api_key")
 
 ```
 
@@ -67,6 +67,7 @@ Chargebee().getTemporaryToken(paymentDetail: paymentDetail, completion: { (token
     ... Handle error here
 })
 ```
+
 ## Author
 
 cb-prabu, meetprabu88@gmail.com

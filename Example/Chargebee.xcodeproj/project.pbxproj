@@ -13,8 +13,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		78A4B154F155E80C3C7D50DB /* Pods_Chargebee_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B230ED301169EE8793AFDF8 /* Pods_Chargebee_Example.framework */; };
-		80FBCFBDD0B1CF2C26D28B92 /* Pods_Chargebee_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC3A7DD7A6302A8F5064140 /* Pods_Chargebee_Tests.framework */; };
+		62B3F4F6713321E11E4A68BB /* Pods_Chargebee_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2172435AB6EDB8C0EB2804F6 /* Pods_Chargebee_Example.framework */; };
+		B4B53B3895933E8EA41816D8 /* Pods_Chargebee_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7312AE4F79735117B94AC47 /* Pods_Chargebee_Tests.framework */; };
+		FA3ECF3524B6FA6C00643E63 /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ECF3424B6FA6C00643E63 /* TokenViewController.swift */; };
+		FA3ECF3724B6FDE300643E63 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ECF3624B6FDE300643E63 /* PlanViewController.swift */; };
+		FA3ECF3924B6FDED00643E63 /* AddonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ECF3824B6FDED00643E63 /* AddonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27801B6890CCB2BC21D9FA96 /* Pods-Chargebee_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chargebee_Tests.release.xcconfig"; path = "Target Support Files/Pods-Chargebee_Tests/Pods-Chargebee_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2B230ED301169EE8793AFDF8 /* Pods_Chargebee_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chargebee_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C1F40907EDA790A2E74A142 /* Pods-Chargebee_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chargebee_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Chargebee_Tests/Pods-Chargebee_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		55398588B31D664F56839DA7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		11D26FE36CF981E946EE2FFA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2172435AB6EDB8C0EB2804F6 /* Pods_Chargebee_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chargebee_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		372AB47A894F58E78F9AFA7C /* Pods-Chargebee_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chargebee_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Chargebee_Tests/Pods-Chargebee_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Chargebee_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chargebee_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,11 +44,15 @@
 		607FACE51AFB9204008FA782 /* Chargebee_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chargebee_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6CD2E24668FB58F8413BAC14 /* Pods-Chargebee_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chargebee_Example.release.xcconfig"; path = "Target Support Files/Pods-Chargebee_Example/Pods-Chargebee_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7EC3A7DD7A6302A8F5064140 /* Pods_Chargebee_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chargebee_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9297CDF543309F67C40AA02D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A16FB63284897D1734256AA6 /* Pods-Chargebee_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chargebee_Example.debug.xcconfig"; path = "Target Support Files/Pods-Chargebee_Example/Pods-Chargebee_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		AD46D98A8EE6C19D889FC817 /* Chargebee.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Chargebee.podspec; path = ../Chargebee.podspec; sourceTree = "<group>"; };
+		6099F4CF2EFB42746EEA3CFC /* Chargebee.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Chargebee.podspec; path = ../Chargebee.podspec; sourceTree = "<group>"; };
+		63558CE279E046838F75D3E6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		880524BD03DBC913F225A876 /* Pods-Chargebee_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chargebee_Example.debug.xcconfig"; path = "Target Support Files/Pods-Chargebee_Example/Pods-Chargebee_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C7F2A43A1A9BBA92A21E3458 /* Pods-Chargebee_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chargebee_Tests.release.xcconfig"; path = "Target Support Files/Pods-Chargebee_Tests/Pods-Chargebee_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D16C7EFA579E1C49742E668F /* Pods-Chargebee_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chargebee_Example.release.xcconfig"; path = "Target Support Files/Pods-Chargebee_Example/Pods-Chargebee_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F7312AE4F79735117B94AC47 /* Pods_Chargebee_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chargebee_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3ECF3424B6FA6C00643E63 /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
+		FA3ECF3624B6FDE300643E63 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		FA3ECF3824B6FDED00643E63 /* AddonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A4B154F155E80C3C7D50DB /* Pods_Chargebee_Example.framework in Frameworks */,
+				62B3F4F6713321E11E4A68BB /* Pods_Chargebee_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,13 +68,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80FBCFBDD0B1CF2C26D28B92 /* Pods_Chargebee_Tests.framework in Frameworks */,
+				B4B53B3895933E8EA41816D8 /* Pods_Chargebee_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F12FF6EE59CE359AA610724 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				880524BD03DBC913F225A876 /* Pods-Chargebee_Example.debug.xcconfig */,
+				D16C7EFA579E1C49742E668F /* Pods-Chargebee_Example.release.xcconfig */,
+				372AB47A894F58E78F9AFA7C /* Pods-Chargebee_Tests.debug.xcconfig */,
+				C7F2A43A1A9BBA92A21E3458 /* Pods-Chargebee_Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +93,8 @@
 				607FACD21AFB9204008FA782 /* Example for Chargebee */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				9E8F98DD02B3CA50BCC5E965 /* Pods */,
-				DB8AA1A37696457FFD8C3DEC /* Frameworks */,
+				2F12FF6EE59CE359AA610724 /* Pods */,
+				AAD4F8DC1372EE4D1A09D929 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +113,9 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				FA3ECF3424B6FA6C00643E63 /* TokenViewController.swift */,
+				FA3ECF3624B6FDE300643E63 /* PlanViewController.swift */,
+				FA3ECF3824B6FDED00643E63 /* AddonViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -132,30 +152,18 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				AD46D98A8EE6C19D889FC817 /* Chargebee.podspec */,
-				9297CDF543309F67C40AA02D /* README.md */,
-				55398588B31D664F56839DA7 /* LICENSE */,
+				6099F4CF2EFB42746EEA3CFC /* Chargebee.podspec */,
+				11D26FE36CF981E946EE2FFA /* README.md */,
+				63558CE279E046838F75D3E6 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9E8F98DD02B3CA50BCC5E965 /* Pods */ = {
+		AAD4F8DC1372EE4D1A09D929 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A16FB63284897D1734256AA6 /* Pods-Chargebee_Example.debug.xcconfig */,
-				6CD2E24668FB58F8413BAC14 /* Pods-Chargebee_Example.release.xcconfig */,
-				4C1F40907EDA790A2E74A142 /* Pods-Chargebee_Tests.debug.xcconfig */,
-				27801B6890CCB2BC21D9FA96 /* Pods-Chargebee_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		DB8AA1A37696457FFD8C3DEC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2B230ED301169EE8793AFDF8 /* Pods_Chargebee_Example.framework */,
-				7EC3A7DD7A6302A8F5064140 /* Pods_Chargebee_Tests.framework */,
+				2172435AB6EDB8C0EB2804F6 /* Pods_Chargebee_Example.framework */,
+				F7312AE4F79735117B94AC47 /* Pods_Chargebee_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,11 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Chargebee_Example" */;
 			buildPhases = (
-				6A97360C903D69B20E1CBA8F /* [CP] Check Pods Manifest.lock */,
+				14752A223DBDF877A65E5AEA /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				12831FF502101492FFB1675D /* [CP] Embed Pods Frameworks */,
+				153FF0938DA9A89FF4740119 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,11 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Chargebee_Tests" */;
 			buildPhases = (
-				350793E151EBB986564A1DC1 /* [CP] Check Pods Manifest.lock */,
+				A5535FAED93DD8FC8AE351FD /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				64825F20D2ADA8E3486BFBC6 /* [CP] Embed Pods Frameworks */,
+				E1F773DF9599FDD9A7A6F288 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +236,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -263,67 +272,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12831FF502101492FFB1675D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chargebee_Example/Pods-Chargebee_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Chargebee/Chargebee.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chargebee.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chargebee_Example/Pods-Chargebee_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		350793E151EBB986564A1DC1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Chargebee_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		64825F20D2ADA8E3486BFBC6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chargebee_Tests/Pods-Chargebee_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chargebee_Tests/Pods-Chargebee_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6A97360C903D69B20E1CBA8F /* [CP] Check Pods Manifest.lock */ = {
+		14752A223DBDF877A65E5AEA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,6 +294,66 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		153FF0938DA9A89FF4740119 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chargebee_Example/Pods-Chargebee_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Chargebee/Chargebee.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chargebee.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chargebee_Example/Pods-Chargebee_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5535FAED93DD8FC8AE351FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chargebee_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1F773DF9599FDD9A7A6F288 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chargebee_Tests/Pods-Chargebee_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chargebee_Tests/Pods-Chargebee_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -352,6 +361,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3ECF3924B6FDED00643E63 /* AddonViewController.swift in Sources */,
+				FA3ECF3524B6FA6C00643E63 /* TokenViewController.swift in Sources */,
+				FA3ECF3724B6FDE300643E63 /* PlanViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -496,7 +508,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A16FB63284897D1734256AA6 /* Pods-Chargebee_Example.debug.xcconfig */;
+			baseConfigurationReference = 880524BD03DBC913F225A876 /* Pods-Chargebee_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chargebee/Info.plist;
@@ -511,7 +523,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CD2E24668FB58F8413BAC14 /* Pods-Chargebee_Example.release.xcconfig */;
+			baseConfigurationReference = D16C7EFA579E1C49742E668F /* Pods-Chargebee_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Chargebee/Info.plist;
@@ -526,7 +538,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C1F40907EDA790A2E74A142 /* Pods-Chargebee_Tests.debug.xcconfig */;
+			baseConfigurationReference = 372AB47A894F58E78F9AFA7C /* Pods-Chargebee_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -548,7 +560,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27801B6890CCB2BC21D9FA96 /* Pods-Chargebee_Tests.release.xcconfig */;
+			baseConfigurationReference = C7F2A43A1A9BBA92A21E3458 /* Pods-Chargebee_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
